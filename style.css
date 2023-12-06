@@ -1,6 +1,6 @@
 body{
   align-items: center;
-  
+
 }
 
 :root {
@@ -27,17 +27,17 @@ body{
 #red{
   width: 150px;
   height: 150px;
-  background-color: red;
+  background-color: #AE0303;
 }
 
 #green{
   width: 150px;
   height: 150px;
-  background-color: greenyellow;
+  background-color: green;
 }
 
 #yellow{
   width: 150px;
   height: 150px;
-  background-color: yellow;
+  background-color: rgb(184, 184, 0);
 }
