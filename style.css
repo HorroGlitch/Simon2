@@ -1,0 +1,43 @@
+body{
+  align-items: center;
+  
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#blue{
+  width: 150px;
+  height: 150px;
+  background-color: darkcyan;
+}
+
+#red{
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+#green{
+  width: 150px;
+  height: 150px;
+  background-color: greenyellow;
+}
+
+#yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
