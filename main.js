@@ -5,7 +5,7 @@ let greenDiv = document.querySelector("#green");
 let blueDiv = document.querySelector("#blue");
 let yellowDiv = document.querySelector("#yellow");
 let i = 0;
-let j = 0;
+const a = ["R","G","B","Y"];
 
 // redDiv.addEventListener("click", ()=>{
     
@@ -23,39 +23,36 @@ let j = 0;
     
 // });
 
-
-
-
-function simon(tableau,game) {
+function simon(tmp,game) {
   
       // console.log(Math.floor(Math.random() * (tableau.length)));
   
-    let randomColor = Math.floor(Math.random() * (tableau.length));
+    let randomColor = Math.floor(Math.random() * (tmp.length));
     
-    let randomColorValue = tableau[randomColor];
+    let randomColorValue = tmp[randomColor];
       console.log(randomColorValue)
-      if (randomColorValue === tableau[0]) {
+      if (randomColorValue === tmp[0]) {
   
         redDiv.style.backgroundColor = "red"
         setTimeout(() => {
           redDiv.style.backgroundColor = "#AE0303"
         }, 500);
     
-      } else if (randomColorValue === tableau[1]) {
+      } else if (randomColorValue === tmp[1]) {
     
         greenDiv.style.backgroundColor = "rgb(104, 172, 3)"
         setTimeout(() => {
           greenDiv.style.backgroundColor = "green"
         }, 500);
     
-      } else if (randomColorValue === tableau[2]) {
+      } else if (randomColorValue === tmp[2]) {
   
         blueDiv.style.backgroundColor = "cyan"
         setTimeout(() => {
           blueDiv.style.backgroundColor = "darkcyan"
         }, 500);
     
-      } else if (randomColorValue === tableau[3]) {
+      } else if (randomColorValue === tmp[3]) {
     
         yellowDiv.style.backgroundColor = "yellow"
         setTimeout(() => {
@@ -72,11 +69,11 @@ function simon(tableau,game) {
   
       redDiv.addEventListener("click", ()=>{
     
-        player.push(tableau["R"])
+        player.push("R")
     
         if (player[i] !== game[i]) {
           alert("Tu as perdu");
-          j+1;
+          clearInterval();
         } else {
     
           redDiv.style.backgroundColor = "red"
@@ -90,11 +87,11 @@ function simon(tableau,game) {
         
       greenDiv.addEventListener("click", ()=>{
     
-          player.push(tableau["G"])
+          player.push("G")
       
           if (player[i] !== game[i]) {
             alert("Tu as perdu");
-            j+1;
+            clearInterval();
           } else {
       
            greenDiv.style.backgroundColor = "rgb(104, 172, 3)"
@@ -108,11 +105,11 @@ function simon(tableau,game) {
         
       blueDiv.addEventListener("click", ()=>{
     
-        player.push(tableau["B"])
+        player.push("B")
       
           if (player[i] !== game[i]) {
             alert("Tu as perdu");
-            j+1;
+            clearInterval();
           } else {
     
           blueDiv.style.backgroundColor = "cyan"
@@ -126,11 +123,11 @@ function simon(tableau,game) {
         
       yellowDiv.addEventListener("click", ()=>{
     
-        player.push(tableau["B"])
+        player.push("Y")
       
           if (player[i] !== game[i]) {
             alert("Tu as perdu");
-            j+1;
+            clearInterval();
           } else {
     
           yellowDiv.style.backgroundColor = "yellow"
@@ -141,15 +138,20 @@ function simon(tableau,game) {
       }
     
       });
+      console.log(player);
     
     }
     isTheUserRight([]);
     i++
-  console.log(game);
+    console.log(game);
   
+
+    console.log(tmp);
     }
 
+simon(a,[]);
 setInterval(simon, 500);
-simon(["R","G","B","Y"],[]);
+
+
 
 
